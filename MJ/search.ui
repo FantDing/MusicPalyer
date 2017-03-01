@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Search</class>
+ <widget class="QWidget" name="Search">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>291</width>
+    <height>42</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>291</width>
+    <height>42</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>291</width>
+    <height>42</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Search
+{
+	background-color:rgba(36,178,206,0.7);
+}
+
+QPushButton#BtnSearch_submit
+{
+	border:none;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="LeSearch_keyword">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>10</y>
+     <width>170</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>歌曲或歌手名</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="LeSearch_page">
+   <property name="geometry">
+    <rect>
+     <x>188</x>
+     <y>10</y>
+     <width>40</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>页序</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BtnSearch_submit">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>5</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

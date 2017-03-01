@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>291</width>
+    <height>427</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>291</width>
+    <height>427</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>291</width>
+    <height>427</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+/*btn打开文件*/
+QPushButton#btn_openfiles,QPushButton#btn_close,QPushButton#btn_minimum
+{
+	border:none;
+}
+
+/*时间显示*/
+QLabel#lab_currenttime,QLabel#lab_duration
+{
+color:white;
+}
+/*当前歌曲信息居中*/
+QLabel#lab_album
+{
+text-align:center;
+}
+/*歌词显示*/
+
+
+/*进度条美化*/
+QSlider::groove:horizontal {  
+  border: 1px solid #bbb;
+background: white;
+height: 8px;  
+border-radius: 4px;  
+
+}
+
+
+QSlider::sub-page:horizontal
+{
+background:  rgb(45, 91, 67);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.006, x2:1, y2:0.011, stop:0 rgba(22, 132, 50, 216), stop:1 rgba(0, 238, 213, 255));
+height: 8px;
+border-radius: 4px;
+	
+}  
+
+
+QSlider::handle:horizontal {  
+background:#CFDFF2; 
+border: 1px solid #777;  
+width: 10px;  
+border-radius: 4px;  
+margin-top: -2px;
+margin-bottom: -2px;
+margin-left: -1px;
+}  
+
+/*btn歌曲控制*/
+QPushButton#btn_play
+{
+border-radius: 17px;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0.006, x2:1, y2:0.011, stop:0 rgba(22, 0, 50, 0), stop:1 rgba(0, 238, 213, 0)) ;
+}
+
+
+
+QPushButton#btn_next
+{
+border-radius: 15px;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0.006, x2:1, y2:0.011, stop:0 rgba(22, 0, 50, 0), stop:1 rgba(0, 238, 213, 0)) ;
+}
+
+QPushButton#btn_prev
+{
+border-radius: 15px;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0.006, x2:1, y2:0.011, stop:0 rgba(22, 0, 50, 0), stop:1 rgba(0, 238, 213, 0)) ;
+
+}
+
+/*音量*/
+QDial#dial_volumn
+{
+ border:none;
+}
+
+/*播放列表*/
+
+/*播放模式*/
+/*copy*/
+ QScrollBar:vertical {
+     border: 2px solid grey;
+     background: #32CC99;
+     width: 15px;
+     margin: 22px 0 22px 0;
+ }
+ QScrollBar::handle:vertical {
+     background:rgb(41,174,255);
+     min-height: 20px;
+ }
+
+ QScrollBar::add-line:vertical {
+     border: 2px solid grey;
+     background: #32CC99;
+     height: 20px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 2px solid grey;
+     background: #32CC99;
+     height: 20px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+     border: 2px solid grey;
+     width: 3px;
+     height: 3px;
+     background: white;
+ }
+
+/*scrollbar没有背景*/
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+     background: none;
+ }
+
+
+/*歌词列表颜色*/
+/*QtabWidget--QTabBar::tab*/
+QTabBar::tab
+{
+	background-color:rgba(36,178,206,0.7);
+	height:12px;
+    border: 1px;
+    border-bottom-color: #C2C7CB; 
+    border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+    min-width: 4ex;
+    padding: 2px;
+	margin-left:10px;
+	
+}
+QTabBar::tab:selected 
+{
+  background-color:rgba(0,120,215,0.7); 
+}
+QTabWidget::tab-bar {
+    alignment: center;
+}
+/*search btn*/
+QPushButton#btn_search
+{
+	border:none;
+}
+
+QLabel#lab_name
+{
+	font-size:14px;
+	color:rgb(242,237,237);
+	font-family:&quot;微软雅黑&quot;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_prev">
+   <property name="geometry">
+    <rect>
+     <x>68</x>
+     <y>389</y>
+     <width>32</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_play">
+   <property name="geometry">
+    <rect>
+     <x>123</x>
+     <y>383</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_next">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>389</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_openfiles">
+   <property name="geometry">
+    <rect>
+     <x>244</x>
+     <y>25</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sld_process">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>52</y>
+     <width>271</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QDial" name="dial_volumn">
+   <property name="geometry">
+    <rect>
+     <x>175</x>
+     <y>63</y>
+     <width>60</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>271</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string/>
+    </attribute>
+    <widget class="QTableWidget" name="tab_playlist">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>271</width>
+       <height>260</height>
+      </rect>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>本地歌曲</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Algerian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="background">
+       <color alpha="0">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string/>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>39</x>
+       <y>180</y>
+       <width>181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="lab_singer">
+        <property name="text">
+         <string>歌手:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lab_song">
+        <property name="text">
+         <string>歌曲:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lab_album">
+        <property name="text">
+         <string>专辑</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>51</y>
+       <width>221</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="lab_lrc0">
+        <property name="text">
+         <string>Welcome</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lab_lrc1">
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string>MJ</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignBottom|Qt::AlignJustify</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lab_lrc2">
+        <property name="text">
+         <string>Music Player</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string/>
+    </attribute>
+    <widget class="QTableWidget" name="tab_playlist_2">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>270</width>
+       <height>260</height>
+      </rect>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>网络歌曲</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Algerian</family>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="background">
+       <color alpha="0">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </property>
+     </column>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="lab_duration">
+   <property name="geometry">
+    <rect>
+     <x>238</x>
+     <y>71</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00：00</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lab_currenttime">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>71</y>
+     <width>48</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00：00</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_PlayMode">
+   <property name="geometry">
+    <rect>
+     <x>244</x>
+     <y>393</y>
+     <width>21</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_skin">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>19</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_search">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>395</y>
+     <width>50</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sli_fontColor">
+   <property name="geometry">
+    <rect>
+     <x>282</x>
+     <y>127</y>
+     <width>30</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_close">
+   <property name="geometry">
+    <rect>
+     <x>261</x>
+     <y>4</y>
+     <width>20</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_minimum">
+   <property name="geometry">
+    <rect>
+     <x>234</x>
+     <y>3</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lab_name">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>0</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>MJ Player</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

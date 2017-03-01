@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>prev2.png</file>
+        <file>next2.png</file>
+        <file>pause2.png</file>
+        <file>play2.png</file>
+        <file>background.jpg</file>
+        <file>music.ico</file>
+        <file>pause_hover2.png</file>
+        <file>play_hover2.png</file>
+        <file>singleloop.png</file>
+        <file>singleloop_menu.png</file>
+        <file>listrange.png</file>
+        <file>listrange_menu.png</file>
+        <file>random_menu.png</file>
+        <file>random4.png</file>
+        <file>open.png</file>
+        <file>background1.jpg</file>
+        <file>skin.png</file>
+        <file>bg8.png</file>
+        <file>bs1.png</file>
+        <file>bs8.png</file>
+        <file>btn_close.png</file>
+        <file>btn_minimum.png</file>
+    </qresource>
+</RCC>
